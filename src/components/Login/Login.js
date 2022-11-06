@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom"
 import axios from "axios"
 import "../Signup/signup.css"
+import cors from "cors"
 
 function Login() {
 
@@ -17,19 +18,21 @@ function Login() {
     }
     function handlelogin(e) {
         e.preventDefault();
-        axios({
-            url: "http://localhost:3001/todo/login",
+        axios("http://localhost:8000/todo/login", {
             method: "POST",
+            mode: "cors",
             headers: {
-
+                'Content-Type': 'application/json'
             },
             data: data
         }).then((res) => {
-            localStorage.setItem("authorization", res.data.authToken);
-            navigate("");
-            setData({ mail: "", password: "" })
+            console.log(69);
+            localStorage.setItem("authorization", res.data.authToken)
+            navigate("/view");
+            // setData({ mail: "", password: "" })
             console.log(res);
         }).catch((err) => {
+            console.log(75);
             alert("Invalid email and password");
             console.log(err);
         })
@@ -41,7 +44,7 @@ function Login() {
             <div className="container">
                 <div className="logo">
                     <div>
-                        <h1>10X Real Estate</h1>
+                        <h1>10X ToDo app</h1>
                     </div>
                 </div>
 

@@ -1,0 +1,54 @@
+.header {
+    margin-left: 200px;  
+    width: 86%;
+    height:75px;
+    left:10px;
+    background-color: white;
+    border: 2px solid rgb(208, 236, 236);
+  }
+  
+  .id{
+    display: flex;
+    margin-left: 55px;
+    margin-top: 25px;
+  }
+  .dropDown{
+      width: 40px;
+      border: none;
+      margin-right: 10px;
+    }
+  
+  
+    
+  .heading{
+    position: absolute;
+    left: 87.12%;
+    right: 3.5%;
+    top: 3.47%;
+    bottom: 94.59%;
+    /* padding-bottom: 40px;
+    padding-right: 50px;
+    padding-left: 5px; */
+    display: flex;
+    float: right;
+    /* margin-right: 10px; */
+    
+  }
+  
+  
+  .heading p{
+    margin-right: 10px;
+    cursor: pointer;
+  }  
+  .icon{
+    display: inline;
+    padding-left: 10px;
+    float:left;
+    background-color: white;
+  
+  }
+  
+  .dropdown{
+    margin-left: 5px;
+  
+  }

@@ -28,7 +28,7 @@ function Signup() {
             alert("Password does not match")
         } else {
             axios({
-                url: "http://localhost:3001/todo/reg",
+                url: "http://localhost:8000/todo/reg",
                 method: "POST",
                 headers: {
 
